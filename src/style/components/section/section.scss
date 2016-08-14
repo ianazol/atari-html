@@ -1,0 +1,47 @@
+.section{
+  padding:40px 0 0 0;
+
+  &__title{
+    margin-bottom: 28px;
+  }
+
+  &__text{
+    p:last-of-type{
+      margin-bottom: 15px;
+    }
+  }
+
+  picture, img{
+    width:100%;
+  }
+
+  &:last-of-type{
+    padding-bottom: 40px;
+  }
+
+  @media #{$gl-sm-up} {
+    padding:55px 0 0 0;
+
+    &:last-of-type{
+      padding-bottom: 55px;
+    }
+  }
+
+  @media #{$gl-md-up} {
+    padding:80px 0 0 0;
+
+    &:last-of-type{
+      padding-bottom: 80px;
+    }
+  }
+
+  @media #{$gl-md-up} {
+    &--reverse{
+      .section__col-after{
+        order: 2;
+      }
+    }
+  }
+
+
+}

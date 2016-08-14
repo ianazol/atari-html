@@ -1,0 +1,59 @@
+@mixin input_text {
+  font-size: 13px;
+  color: #c4c4c4;
+  font-family: "Geometria-ExtraBold";
+  text-transform: uppercase;
+  opacity:1;
+  transition: opacity 0.3s ease;
+}
+
+.form{
+  &__field{
+    padding: 0 0 15px 0;
+  }
+
+  input{
+    height:35px;
+    width:100%;
+    background: none;
+    border:none;
+    border-bottom:3px solid white;
+    outline: none;
+    @include input_text;
+    color: white;
+
+    &.invalid{
+      color: $red;
+      border-bottom-color: $red;
+      background: url(../img/invalid.png) right center no-repeat;
+    }
+  }
+
+  &--dark{
+    input{
+      border-bottom: 3px solid $grey;
+      color: $grey;
+    }
+  }
+
+  input::-webkit-input-placeholder       {@include input_text;}
+  input::-moz-placeholder                {@include input_text;}
+  input:-moz-placeholder                 {@include input_text;}
+  input:-ms-input-placeholder            {@include input_text;}
+
+  input.invalid::-webkit-input-placeholder {color: $red;}
+  input.invalid::-moz-placeholder          {color: $red;}
+  input.invalid:-moz-placeholder           {color: $red;}
+  input.invalid:-ms-input-placeholder      {color: $red;}
+
+  input:focus::-webkit-input-placeholder {opacity: 0.5; transition: opacity 0.3s ease;}
+  input:focus::-moz-placeholder          {opacity: 0.5; transition: opacity 0.3s ease;}
+  input:focus:-moz-placeholder           {opacity: 0.5; transition: opacity 0.3s ease;}
+  input:focus:-ms-input-placeholder      {opacity: 0.5; transition: opacity 0.3s ease;}
+
+  button{
+    margin-top:15px;
+  }
+
+
+}

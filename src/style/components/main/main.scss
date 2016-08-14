@@ -1,0 +1,149 @@
+.main{
+  width:100%;
+  height:100vh;
+  z-index: 1;
+  position: relative;
+
+  &__image{
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+
+    &--main{
+       background-image: url("../img/main-min.jpg");
+
+       @media #{$gl-sm-up}{
+         &{
+           background-image: url("../img/main-big.jpg");
+         }
+       }
+     }
+
+    &--trainers{
+      background-image: url("../img/trainers-min.jpg");
+
+      @media #{$gl-sm-up}{
+        &{
+          background-image: url("../img/trainers-big.jpg");
+        }
+      }
+    }
+
+    &--kudo{
+      background-image: url("../img/kudo-bg-min.jpg");
+
+      @media #{$gl-sm-up}{
+        &{
+          background-image: url("../img/kudo-big.jpg");
+        }
+      }
+    }
+
+    &--about{
+      background-image: url("../img/about.jpg");
+      background-position: center;
+    }
+
+    @media #{$gl-md}{
+      background-position: center;
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width:100%;
+      height:100%;
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top:0;
+      left:0;
+      z-index: 2;
+    }
+
+    &--trener{
+      background-position: center top;
+
+      &:after{
+        background: rgba(0, 0, 0, 0.4);
+
+        @media #{$gl-md-up}{
+            background: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+    &--discipliny{
+      background-image: url("../img/dis-min.jpg");
+      background-position: center top;
+
+      &:after{
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      @media #{$gl-sm-up}{
+        background-image: url("../img/dis-big.jpg");
+      }
+    }
+
+    .video {
+      display: none;
+
+      @media #{$gl-md-up}{
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+
+        video {
+          min-height: 100%;
+          min-width: 100%;
+        }
+      }
+    }
+
+    
+  }
+
+  &__text{
+    color: white;
+    z-index:3;
+    position: relative;
+    padding:0 0 50px 0;
+    min-height: 335px;
+    
+    a{
+      color: white;
+      &:after{
+        background: white;
+      }
+      &:hover{
+        color: $red;
+      }
+    }
+
+    @media #{$gl-sm-up}{
+      min-height: auto;
+    }
+
+    @media #{$gl-md-up}{
+      padding-bottom: 80px;
+
+      p:last-of-type{
+        margin-bottom:25px;
+      }
+    }
+  }
+
+  h1{
+    margin:0 0 45px;
+  }
+}

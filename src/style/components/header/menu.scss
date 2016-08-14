@@ -1,0 +1,26 @@
+.menu{
+  li{
+    display: block;
+    float: left;
+    margin-right:30px;
+    line-height: 1;
+
+    a{
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-family: "Geometria-ExtraBold";
+      text-decoration: none;
+      
+      &:after{
+        display: none;
+      }
+    }
+  }
+
+  @media #{$gl-md}{
+    &{
+      display: none;
+    }
+  }
+}

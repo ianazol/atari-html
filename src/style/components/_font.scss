@@ -1,0 +1,37 @@
+$font_path: "../fonts";
+
+@font-face {
+  font-family: "Geometria";
+  src: url('#{$font_path}/Geometria/Geometria.eot');
+  src: url('#{$font_path}/Geometria/Geometria.eot?#iefix') format('embedded-opentype'),
+  url('#{$font_path}/Geometria/Geometria.woff2') format('woff2'),
+  url('#{$font_path}/Geometria/Geometria.woff') format('woff'),
+  url('#{$font_path}/Geometria/Geometria.ttf') format('truetype'),
+  url('#{$font_path}/Geometria/Geometria.svg#geometriaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geometria-ExtraBold";
+  src: url('#{$font_path}/Geometria-ExtraBold/Geometria-ExtraBold.eot');
+  src: url('#{$font_path}/Geometria-ExtraBold/Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font_path}/Geometria-ExtraBold/Geometria-ExtraBold.woff2') format('woff2'),
+  url('#{$font_path}/Geometria-ExtraBold/Geometria-ExtraBold.woff') format('woff'),
+  url('#{$font_path}/Geometria-ExtraBold/Geometria-ExtraBold.ttf') format('truetype'),
+  url('#{$font_path}/Geometria-ExtraBold/Geometria-ExtraBold.svg#geometriaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geometria-Heavy";
+  src: url('#{$font_path}/Geometria-Heavy/Geometria-Heavy.eot');
+  src: url('#{$font_path}/Geometria-Heavy/Geometria-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('#{$font_path}/Geometria-Heavy/Geometria-Heavy.woff2') format('woff2'),
+  url('#{$font_path}/Geometria-Heavy/Geometria-Heavy.woff') format('woff'),
+  url('#{$font_path}/Geometria-Heavy/Geometria-Heavy.ttf') format('truetype'),
+  url('#{$font_path}/Geometria-Heavy/Geometria-Heavy.svg#geometriaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,120 @@
+.left-menu{
+  background: #fff;
+  width:100vw;
+  height:100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  /*opacity: 0;*/
+  transform: translate(-100vw, 0);
+  transition: /*opacity .3s,*/ transform .3s;
+  will-change: transform;
+
+  @media #{$gl-sm-up}{
+      width: 370px;
+      transform: translate(-370px, 0);
+  }
+
+  &__wrap{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding:40px;
+    position: relative;
+  }
+
+  &__close{
+    position: absolute;
+    top:40px;
+    left:40px;
+    opacity:0;
+    transition: opacity .5s .3s;
+    will-change: opacity;
+    outline: none;
+  }
+
+  &__social{
+    opacity:0;
+    transition: opacity .5s .3s;
+    will-change: opacity;
+  }
+
+  &__links{
+    font-size: 30px;
+    font-family: "Geometria-Heavy";
+    text-transform: uppercase;
+    padding-bottom:30px;
+    
+    a{
+      position: relative;
+      opacity:1;
+      transform: translate3d(0,0,0);
+      display: block;
+    }
+    
+    a:after{
+      display: none;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-height:100%;
+    padding-top: 15vh;
+
+    @media #{$gl-sm-up}{
+      padding-bottom: 4vh;
+    }
+
+  }
+}
+
+.content{
+  height:100%;
+  transform: translate(0,0);
+  transition: transform .3s;
+  will-change: transform;
+  width: 100%;
+}
+
+.overlay{
+  width:100%;
+  height:100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:5;
+  opacity:0;
+  transition: opacity .3s;
+
+  &--hidden{
+    visibility: hidden;
+  }
+}
+
+.menu_open{
+  .left-menu{
+    transform: translate(0, 0);
+
+    &__close, &__social{
+      opacity: 1;
+    }
+  }
+
+  .header__inner{
+    transform: translate(100px,0);
+  }
+
+  .content{
+    transform: translate(100px,0);
+  }
+
+  .overlay{
+    opacity: 1;
+  }
+}

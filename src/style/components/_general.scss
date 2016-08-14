@@ -1,0 +1,157 @@
+html{
+  min-height:100vh;
+  /*width: 100vw;*/
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  min-width:320px;
+  font-size: 16px;
+  font-family: "Geometria";
+  line-height:1.5;
+  min-height:100vh;
+  color: $grey;
+  /*width: 100vw;*/
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+img{
+  vertical-align: top;
+}
+
+.container{
+  width:100%;
+  min-width:320px;
+  max-width:1250px;
+  margin: 0 auto;
+  padding:0 15px;
+
+  @media #{$gl-sm-up}{
+    padding:0 40px;
+  }
+}
+
+.dark-bg-wrapper{
+  position: relative;
+  color: $grey;
+  transition: color 1.3s;
+  will-change: color;
+}
+
+.dark-bg-overlay{
+  position: absolute;
+  background: $grey;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.3s;
+}
+
+.dark-bg{
+  color: #fff;
+  .dark-bg-overlay{
+    opacity: 1;
+  }
+}
+
+.fullheight{
+  height:100%;
+}
+
+.hidden{
+  display: none;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+h1, h2, h3, h4,
+.is-h1, .is-h2, .is-h3, .is-h4{
+  font-family: "Geometria-Heavy";
+  text-transform: uppercase;
+  line-height: 115%;
+  letter-spacing: -1px;
+  display: block;
+
+  &.white{
+    color: white;
+  }
+}
+
+h1, .is-h1{
+  font-size: 40px;
+
+  @media #{$gl-md}{
+    &{
+      font-size: 35px;
+    }
+  }
+}
+
+h2, .is-h2{
+  font-size: 30px;
+}
+
+h3, .is-h3{
+  font-size: 25px;
+  line-height: 125%;
+}
+
+h4, .is-h4{
+  font-size: 20px;
+}
+
+a{
+  color: $grey;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  outline: none;
+
+  &:after{
+    content: '';
+    display: block;
+    height:1px;
+    background: $grey;
+    position: absolute;
+    opacity: 0.5;
+    width:100%;
+  }
+  
+  &:hover{
+    color: $red;
+
+    &:after{
+      display: none;
+    }
+  }
+}
+
+p{
+  margin:20px 0;
+}
+
+@media #{$gl-md}{
+  .touch-hidden{
+    display: none;
+  }
+}
+
+@media #{$gl-md-up}{
+  .desktop-hidden{
+    display: none;
+  }
+}
