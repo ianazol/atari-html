@@ -34,12 +34,60 @@
       }
     }
 
+    &--aikido{
+      background-image: url("../img/aikido_mobile_320.png");
+
+      @media #{$gl-sm-up}{
+        &{
+          background-image: url("../img/aikido_tablet_1024.png");
+        }
+      }
+
+      @media #{$gl-md-up}{
+        &{
+          background-image: url("../img/aikido_desktop.png");
+        }
+      }
+    }
+
     &--kudo{
       background-image: url("../img/kudo-bg-min.jpg");
 
       @media #{$gl-sm-up}{
         &{
           background-image: url("../img/kudo-big.jpg");
+        }
+      }
+    }
+
+    &--boxing{
+      background-image: url("../img/boxing_1_mobile.png");
+
+      @media #{$gl-sm-up}{
+        &{
+          background-image: url("../img/boxing_1_tablet.png");
+        }
+      }
+
+      @media #{$gl-md-up}{
+        &{
+          background-image: url("../img/boxing_1_desktop.png");
+        }
+      }
+    }
+
+    &--thai{
+      background-image: url("../img/thai_1_tablet.png");
+
+      @media #{$gl-sm-up}{
+        &{
+          background-image: url("../img/thai_1_tablet.png");
+        }
+      }
+
+      @media #{$gl-md-up}{
+        &{
+          background-image: url("../img/thai_1_desktop.png");
         }
       }
     }

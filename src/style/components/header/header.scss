@@ -48,6 +48,15 @@
     }
   }
 
+  &__phone{
+    display: none;
+    @media #{$gl-sm-up}{
+      display: inline-block;
+      margin-right: 20px;
+      color: white;
+    }
+  }
+
   &--dark{
     .menu li a{
       color: $grey;
@@ -61,6 +70,10 @@
       svg{
         fill: $grey;
       }
+    }
+
+    .header__phone{
+      color: $grey;
     }
   }
   

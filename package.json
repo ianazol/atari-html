@@ -1,11 +1,6 @@
 {
   "name": "atari",
   "version": "1.0.1",
-  //"description": "",
-  /*"repository": {
-    "type": "git",
-    "url": "https://github.com/Insayt/frontend-devil"
-  },*/
   "dependencies": {
     "browser-sync": "^2.2.3",
     "gulp": "^3.8.11",
