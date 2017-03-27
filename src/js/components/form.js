@@ -31,6 +31,7 @@ $('.js-formValidate').submit(function(){
                 if (response == 'ok'){
                     form.siblings(".form__success").removeClass("hidden");
                     form[0].reset();
+                    yaCounter39767150.reachGoal('zayavka-ok');
                 }
             }
         });
