@@ -63,10 +63,6 @@
     display: none;
   }
 
-  /*@media #{$gl-sm-up}{
-    
-  }*/
-
   @media #{$gl-md-up} {
     height:100vh;
     min-height: 650px;
@@ -117,5 +113,9 @@
       padding-bottom: 75px;
       padding-top:0;
     }
+  }
+
+  &__text-item {
+    margin:15px 0;
   }
 }
