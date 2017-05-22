@@ -3,6 +3,10 @@
 
   &__title{
     margin-bottom: 28px;
+    
+    &:after {
+      display: none;
+    }
   }
 
   &__text{
